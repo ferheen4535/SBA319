@@ -1,28 +1,32 @@
 import express from 'express';
 import * as usersControllers from '../../controllers/quiz/usersControllers.js';
+
 const router = express.Router();
 
-router.get('/', (req, res) => {        //test//
-    res.send('I am ready to take the Badmaash Quiz')
-})
-
-// routes / API Endpoints//
-//INDUCES-index, new, delete, update, create, edit, show//CRUD//
-
-//seed///
-router.get('/seed', usersControllers.seedUsers)
-
-//index//
+// Seed
 router.get('/', usersControllers.seedUsers);
 
-//new//
+// Index - Get all users
+router.get('/', usersControllers.getUsers);
 
+// Show - Get a single user
+router.get('/:id', usersControllers.getUser);
 
-//create//
+// Create - Add a new user, 
+//_id:680bb0b4f777b4261418f9c6
+//username "Musa"
+//email "musa.k@gmail.com"
+//and//
+//username: 'Mark',
+//email: 'mark.k@gmail.com',
+//_id: new ObjectId('680e4fe3365a37054b886b27'),
+
 router.post('/', usersControllers.createUser);
 
 
 
-
+// Delete - Remove a user//
+//http://localhost:5055/quiz/users/680e4fe3365a37054b886b27//
+router.delete('/:id', usersControllers.deleteUser);
 
 export default router;
