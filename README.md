@@ -1,6 +1,6 @@
 # SBA319 - Badmaash Beards Quiz API
 
-A Node.js and Express backend for a personality-style beard product quiz. This application uses MongoDB to store quiz results and questions, supporting full CRUD operations, data seeding, validation, and indexing.
+A Node.js and Express backend for a personality-style beard product quiz. This application uses Mongoose and MongoDB to store quiz results and questions, supporting full CRUD operations, data seeding, validation, and indexing.
 
 
 ## Features
@@ -8,7 +8,7 @@ A Node.js and Express backend for a personality-style beard product quiz. This a
 - Seed database with sample data
 - Clear existing data before seeding
 - Full CRUD operations for Results and Questions
-- MongoDB document validation
+- Mongoose document validation
 - Indexed fields for optimized query performance
 
 ---
