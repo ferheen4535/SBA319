@@ -67,20 +67,42 @@ export async function seedQuestions(req, res) {
         
     }
     
-    
     async function createQuestions(req, res) {
-        try{
-            const question = await Questionsuestion.create(req.body);
-            console.log(question);
-            res.status(201).json(question);
-        }catch(error) {
-            console.error(error);
-            res.status(400).json({error: error.message});
-        }   
-    }
+      try {
+          const question = await Questions.create(req.body);  
+          console.log(question);
+          res.status(201).json(question);
+      } catch (error) {
+          console.error(error);
+          res.status(400).json({ error: error.message });
+      }
+  }
+
+
+  // export async function updateQuestion(req, res) {
+  //   try {
+  //     const updatedQuestion = await Questions.findByIdAndUpdate(
+  //       req.params.id,
+  //       req.body,
+  //       { new: true, runValidators: true }
+  //     );
+  
+  //     if (!updatedQuestion) {
+  //       return res.status(404).json({ error: 'Question not found' });
+  //     }
+  
+  //     res.status(200).json(updatedQuestion);
+  //   } catch (error) {
+  //     res.status(400).json({ error: error.message });
+  //   }
+  // }
+  
+   
     
     export {
    
       getQuestions,
-      createQuestions
+      createQuestions,
+      // updateQuestion,
+
     };

@@ -29,7 +29,11 @@ DELETE   http://localhost:5055/quiz/users/680e76e6fd5178d9af974cb6  DELETE RESUL
 PUT 	 http://localhost:5055/quiz/results/680bca9082d1f2edec46715c UPDATE RESULTS
   
 
-QUESTIONS:  http://localhost:5055/quiz/questions   GET ALL USER ANSWERS FROM QUESTIONS
+QUESTIONS:  
+
+GET   http://localhost:5055/quiz/questions   GET ALL USER ANSWERS FROM QUESTIONS
+POST  http://localhost:5055/quiz/questions   CREATE NEW QUESTION
+
 
 
 

@@ -1,5 +1,5 @@
 import express from 'express';
-import * as questionsController from '../../controllers/quiz/questionsControllers.js';
+import * as questionsControllers from '../../controllers/quiz/questionsControllers.js';
 
 const router = express.Router();
 
@@ -9,13 +9,21 @@ router.get('/test', (req, res) => {
 });
 
 // Seed route
-router.get('/seed', questionsController.seedQuestions);
+router.get('/', questionsControllers.seedQuestions);
 
 // Get all questions
-router.get('/', questionsController.getQuestions);
+router.get('/', questionsControllers.getQuestions);
 
 // Post a new question
-router.post('/', questionsController.createQuestions);
+// text: 'How much Macha do you drink?',
+//options: [ 'Too Macha', 'Not that Macha', 'Not Macha', 'Macha Macha' ],
+//_id: new ObjectId('680fb5f5651fc22d2433be4a'),
+router.post('/', questionsControllers.createQuestions);
+
+
+// update route - PUT /:id //
+///not working for me///
+// router.put('/:id', questionsControllers.updateQuestion);
 
 export default router;
 
