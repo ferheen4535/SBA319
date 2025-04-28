@@ -23,7 +23,10 @@ app.get('/',(req, res)=>{
     res.send('Welcome to Badmaash Beards Quiz')
 })
 
-
+//I am able to make Create, update, and delete routes in Postman and 
+// I see the changes in compass but when I go back the next day to 
+// recheck my work, the IDs change and I can't see the changes in postman again//
+//I tried to work on fixing it all weekend but not sure why it is happening//
 
 /////////////////////////
 
