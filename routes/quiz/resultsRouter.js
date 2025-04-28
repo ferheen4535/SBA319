@@ -4,7 +4,7 @@ import * as resultsControllers from '../../controllers/quiz/resultsControllers.j
 const router = express.Router();
 
 // Seed route
-router.get('/seed', resultsControllers.seedResults);
+router.get('/', resultsControllers.seedResults);
 
 // Index route (replace this with actual index logic later)
 router.get('/', (req, res) => {
@@ -12,10 +12,20 @@ router.get('/', (req, res) => {
 });
 
 // Create route//
+//title: 'The Masti Macha',
+//scentMatch: 'Macha Macha Macha',
+//description: 'For my Macha Girlies',
+
+//my id numbers keep changing so I am having a hard time checking the results//
 router.post('/', resultsControllers.createResult); 
 
 
 // update route - PUT /:id 680bca9082d1f2edec46715c//
+//since the ids keep changing on me, the update goes to another entry.//
+//680f82bb0ed5ac6cd24d3934
+//title "Super Badmaash"
+//scentMatch "Macha Macha Macha"
+//description "For my Macha Girlies"
 router.put('/:id', resultsControllers.updateResult);
 
 

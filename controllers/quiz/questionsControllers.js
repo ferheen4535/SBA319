@@ -51,20 +51,10 @@ export async function seedQuestions(req, res) {
             }
           ]);
 
-
-
-
-
-
-
-
-
-
-    
-            res.status(201).json(questions)
-        }catch(error){
-            res.status(400).json({error: error.message});
-        }
+    res.status(201).json(questions)
+      }catch(error){
+      res.status(400).json({error: error.message});
+      }
     }
     
     async function getQuestions(req, res) {
@@ -80,7 +70,7 @@ export async function seedQuestions(req, res) {
     
     async function createQuestions(req, res) {
         try{
-            const question = await question.create(req.body);
+            const question = await Questionsuestion.create(req.body);
             console.log(question);
             res.status(201).json(question);
         }catch(error) {
