@@ -4,7 +4,7 @@ import * as usersControllers from '../../controllers/quiz/usersControllers.js';
 const router = express.Router();
 
 // Seed
-router.get('/', usersControllers.seedUsers);
+router.get('/seed', usersControllers.seedUsers);
 
 // Index - Get all users
 router.get('/', usersControllers.getUsers);

@@ -4,7 +4,7 @@ import * as resultsControllers from '../../controllers/quiz/resultsControllers.j
 const router = express.Router();
 
 // Seed route
-router.get('/', resultsControllers.seedResults);
+router.get('/seed', resultsControllers.seedResults);
 
 // Index route (replace this with actual index logic later)
 router.get('/', (req, res) => {

@@ -9,7 +9,7 @@ router.get('/test', (req, res) => {
 });
 
 // Seed route
-router.get('/', questionsControllers.seedQuestions);
+router.get('/seed', questionsControllers.seedQuestions);
 
 // Get all questions
 router.get('/', questionsControllers.getQuestions);
